@@ -1,8 +1,7 @@
-// Seleção de Elementos
+
 const generatePasswordButton = document.querySelector("#generate-password");
 const generatedPasswordElement = document.querySelector("#generated-password");
 
-// Novas funcionalidades
 const openCloseGeneratorButton = document.querySelector(
   "#open-generate-password"
 );
@@ -13,7 +12,7 @@ const numbersInput = document.querySelector("#numbers");
 const symbolsInput = document.querySelector("#symbols");
 const copyPasswordButton = document.querySelector("#copy-password");
 
-// Funções
+
 const getLetterLowerCase = () => {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 };
@@ -39,7 +38,7 @@ const generatePassword = (
 ) => {
   let password = "";
 
-  //   Segunda versão
+
   const passwordLength = +lengthInput.value;
 
   const generators = [];
@@ -77,7 +76,7 @@ const generatePassword = (
   generatedPasswordElement.querySelector("h4").innerText = password;
 };
 
-// Eventos
+
 generatePasswordButton.addEventListener("click", () => {
   generatePassword(
     getLetterLowerCase,
